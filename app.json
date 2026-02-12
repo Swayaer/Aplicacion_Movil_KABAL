@@ -1,7 +1,7 @@
 {
   "expo": {
-   "name": "StockLy",
-  "slug": "stockly",
+    "name": "StockLy",
+    "slug": "MiNegocioFacil",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -50,6 +50,7 @@
       "eas": {
         "projectId": "d26bddf7-2ee6-4d7c-8199-63e98675e027"
       }
-    }
+    },
+    "owner": "sway502gt"
   }
 }
