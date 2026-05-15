@@ -1,33 +1,65 @@
-import { Tabs } from 'expo-router';
 import React from 'react';
-
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import { Tabs } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
+        tabBarStyle: {
+          backgroundColor: '#0f0c29',
+          height: 60,
+          paddingBottom: 10,
+          position: 'absolute',
+          borderTopWidth: 0,
+        },
+        tabBarActiveTintColor: '#00d2ff',
+        tabBarInactiveTintColor: '#edf3f5',
+      }}
+    >
       <Tabs.Screen
-        name="index"
+        name="index" 
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Inicio',
+          tabBarIcon: ({ color }) => <Ionicons name="home-outline" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="venta"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Ventas',
+          tabBarIcon: ({ color }) => <Ionicons name="cart-outline" size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="inventario"
+        options={{
+          title: 'Stock',
+          tabBarIcon: ({ color }) => <Ionicons name="cube-outline" size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="reportes"
+        options={{
+          title: 'Reportes',
+          tabBarIcon: ({ color }) => <Ionicons name="bar-chart-outline" size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="perfil"
+        options={{
+          title: 'Perfil',
+          tabBarIcon: ({ color }) => <Ionicons name="person-outline" size={24} color={color} />,
+        }}
+      />
+      
+      {/* 👇 PANTALLA DEL ESCÁNER OCULTA DE LA BARRA INFERIOR 👇 */}
+      <Tabs.Screen
+        name="escaner"
+        options={{
+          href: null, // Esto es la magia: la oculta de las pestañas
+          title: 'Escanear Producto'
         }}
       />
     </Tabs>

@@ -1,11 +1,12 @@
-import { VentasProvider } from "../context/VentasContext"; // Verifica la ruta
+import { VentasProvider } from "../context/VentasContext";
 import { Stack } from "expo-router";
 
 export default function RootLayout() {
   return (
     <VentasProvider>
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(tabs)" />
+      <Stack>
+        {/* El nombre "(tabs)" debe coincidir con el nombre de tu carpeta */}
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack>
     </VentasProvider>
   );

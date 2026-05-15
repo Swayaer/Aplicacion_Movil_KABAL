@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "StockLy",
-    "slug": "StockLy",
+    "name": "Kabal",
+    "slug": "Kabal",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -28,14 +28,26 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Kabal necesita acceso a la cámara para escanear los productos de tu inventario."
+        }
       ]
     ],
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "bff38d5e-65e7-4618-aa6d-51f82ad26521"
+        "projectId": "4086e54a-8143-45aa-9346-144c4db4fd65"
       }
     },
-    "owner": "sway502gt"
+    "owner": "sway502gt",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/4086e54a-8143-45aa-9346-144c4db4fd65"
+    }
   }
 }
